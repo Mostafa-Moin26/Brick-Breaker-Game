@@ -1,3 +1,4 @@
+import 'package:brick_breaker/ball.dart';
 import 'package:brick_breaker/coverscreen.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
@@ -38,17 +39,10 @@ class _HomePageState extends State<HomePage> {
               // tap to play
               CoverScreen(hasGameStarted: hasGameStarted),
               // ball
-              Container(
-                alignment: Alignment(ballX, ballY),
-                child: Container(
-                  height: 15,
-                  width: 15,
-                  decoration: const BoxDecoration(
-                    color: Colors.deepPurple,
-                    shape: BoxShape.circle,
-                  ),
-                ),
-              )
+              MyBall(
+                ballX: ballX,
+                ballY: ballY,
+              ),
             ],
           ),
         ),
