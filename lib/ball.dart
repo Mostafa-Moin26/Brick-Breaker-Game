@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class MyBall extends StatelessWidget {
-  final ballX;
-  final ballY;
-  const MyBall({super.key, this.ballX, this.ballY});
+  final double ballX;
+  final double ballY;
+  const MyBall({super.key, required this.ballX, required this.ballY});
 
   @override
   Widget build(BuildContext context) {

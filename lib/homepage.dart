@@ -1,5 +1,6 @@
 import 'package:brick_breaker/ball.dart';
 import 'package:brick_breaker/coverscreen.dart';
+import 'package:brick_breaker/player.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
@@ -17,6 +18,10 @@ class _HomePageState extends State<HomePage> {
 
   // game setting
   bool hasGameStarted = false;
+
+  // player
+  double playerX = 0;
+  double playerWidth = 0.3;
 
   void startGame() {
     hasGameStarted = true;
@@ -43,6 +48,9 @@ class _HomePageState extends State<HomePage> {
                 ballX: ballX,
                 ballY: ballY,
               ),
+
+              // player
+              MyPlayer(playerX: playerX, playerWidth: playerWidth),
             ],
           ),
         ),
